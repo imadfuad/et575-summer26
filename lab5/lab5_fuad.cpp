@@ -80,6 +80,47 @@ int main(){
 
 
 
+  cout << "\n ----- example 10: combinate methods ----- " << endl;
+// add string m in username starting 123
+  cout << username << endl;
+  cout << m << endl;
+  // find the index for 123
+  int index123 = username.find("123");
+  // add value of string m straing from index123
+  //add value of string m before index123
+  username.insert(username.find("123"), m);
+
+  cout << username << endl;
+  cout << "\n ----- practice exam 1 ------ " << endl;
+
+  string password = "peterpan123";
+  int a = password.length();
+  int b = a - 2;
+
+  password.replace(b, 3, "NONE");
+
+  cout << password << endl;
+
+
+  cout << "\n----- EXERCISE -----" << endl;
+
+  string new_word;
+
+  cout << "Type a word: ";
+  cin >> new_word;
+
+  cout << "The 4th character is: " << new_word[3] << endl;
+
+  cout << "The length of the word is: " << new_word.length() << " characters." << endl;
+
+  new_word.replace(1, 3, "--$--");
+  cout << "After replacement: " << new_word << endl;
+
+  new_word.erase(new_word.length() - 2, 2);
+  cout << "After removing two characters from the end: " << new_word << endl;
+
+
+
 
 
 
