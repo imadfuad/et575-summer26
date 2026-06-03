@@ -5,6 +5,7 @@ lab 7: control flow
 */
 
 #include<iostream>
+#include<string>
 
 using namespace std;
 
@@ -114,5 +115,108 @@ else{
 cout << wavelength << " nm emits " << emittedlight << " light" << endl;
 
 
+cout << "\n ----- example 5: conditional operator ---- " << endl;
+// conditional operator: three operands --> condition ? expression1 (true) : expression2 (false)
+
+/*
+example 3)
+if(n % 2 == 0){
+    cout << n << " is an EVEN number" << endl;
+}
+else{
+    cout << n << " is an ODD number" << endl;
+}
+*/
+
+cout << n << ((n % 2 == 0) ? " is an EVEN number" : " is an ODD number") << endl;
+cout << "\n ----- example 6: conditional operator ---- " << endl;
+// check if n is greater than 10. if n is greater than 10, set the max value to n.
+int max = 10;
+bool checkmax = false;
+
+// if-else
+if (n > max) {
+    checkmax = true;
+}
+else {
+    checkmax = false;
+}
+
+// conditional operands to check if n is greater than max.
+checkmax = n > max ? true : false;
+cout<<" Is n greater than 10 ? = "<<checkmax<<endl;
+
+cout << "\n----- example 7: nested conditional statement ----" << endl;
+
+// check if a number, n, is positive (even or odd), negative, or zero
+/*
+// multiway statement
+
+if (n > 0 && n % 2 == 0) {
+    cout << "positive and even number" << endl;
+}
+else if (n > 0 && n % 2 != 0) {
+    cout << "positive and odd number" << endl;
+}
+else if (n < 0) {
+    cout << "negative" << endl;
+}
+else {
+    cout << "zero" << endl;
+}
+*/
+
+cout << "\n----- example 7: nested conditional statement ----" << endl;
+
+// check if a number, n, is positive, negative, or zero
+// nested if statement
+
+if (n > 0) {
+    // inner conditional statement
+    if (n % 2 == 0)
+        cout << "positive and even number" << endl;
+    else
+        cout << "positive and odd number" << endl;
+}
+else if (n < 0) {
+    if (n % 2 == 0)
+        cout << "negative and even number" << endl;
+    else
+        cout << "negative and odd number" << endl;
+}
+else {
+    cout << "zero" << endl;
+}
+
+cout << "\n----- exercise Lab 7: Shipping Cost -----" << endl;
+
+    double weight;
+    double shipping_cost;
+
+    // ask user to enter package weight
+    cout << "Enter the weight of the package in pounds: ";
+    cin >> weight;
+
+    // multiway if-else if-else statement
+    if (weight <= 0) {
+        shipping_cost = 0;
+    }
+    else if (weight > 0 && weight <= 2) {
+        shipping_cost = 5.00;
+    }
+    else if (weight > 2 && weight <= 5) {
+        shipping_cost = 8.20;
+    }
+    else if (weight > 5 && weight <= 10) {
+        shipping_cost = 10.25;
+    }
+    else {
+        shipping_cost = 12.50;
+    }
+
+    // display result
+    cout << "A package of weight " << weight << " costs $" << shipping_cost << endl;
+
     return 0;
 }
+
