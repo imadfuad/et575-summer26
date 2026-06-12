@@ -63,4 +63,41 @@ int getpositive(){
     // recursive case
     else
         return getpositive();
+        
+}
+
+// example 4: built-in function
+// program to calculate the hypotenusa of a right triangle
+// function to calculate the the hypotenuse
+#include<cmath>
+
+float hypotenuse(int side1, int side2){
+    return sqrt(pow(side1, 2) + pow(side2,2));
+}
+
+// function to print result
+void printresult(int side1, int side2, float hyp){
+    cout<<"The hypotenusa of a right triangle with sides "
+        <<side1<<" and "<<side2<<" is "<<hyp<<endl;
+    return;
+}
+
+// example 5: random numbers
+#include<cstdlib>
+#include<time.h>
+
+
+
+void randomnumber(){
+    srand(time(0));
+    cout<<rand()<<endl;
+    cout<<rand()<<endl;
+    cout<<rand()<<endl;
+}
+
+
+// example 6: random number between -5 and 10, inclusive
+int random_neg5_10(){
+    srand(time(0));
+    return (-5 + rand()%16);
 }

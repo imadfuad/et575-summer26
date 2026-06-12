@@ -20,5 +20,23 @@ cout<<"\n----- Example 3: recursive function to validate a number -----"<<endl;
 int n = getpositive();
 cout<<"Collected number = "<<n<<endl;
 
+cout<<"\n----- Example 4: built-in function -----"<<endl;
+    int s1 = getpositive();
+    int s2 = getpositive();
+    float h = hypotenuse(s1, s2);
+    printresult(s1, s2, h);
+
+
+cout<<"\n----- Example 5: random function -----"<<endl;
+
+randomnumber();
+cout<<endl;
+randomnumber();
+
+
+cout<<"\n----- Example 6: range of random function -----"<<endl;
+int r = random_neg5_10();
+cout<<r<<endl;
+
     return 0;
 }
