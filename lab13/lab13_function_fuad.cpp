@@ -78,3 +78,47 @@ int addition(int a, int b){
 int tripleaddition(){
     return 3*(addition(2,3)); // function calling function
 }
+
+                                        // lab exercise
+             // function 1: collect an integer between 1 and 10 inclusive
+int collectnumber(){
+    int n;
+    cout<<"Enter an integer between 1 and 10: ";
+    cin>>n;
+
+    while(n<1 || n>10){
+        cout<<"Invalid input! Enter an integer between 1 and 10: ";
+        cin>>n;
+    }
+
+    return n;
+}
+
+// function 2: print all integers from collected number up to 15 inclusive
+void printnumbers(int n){
+    for(int i=n; i<=15; i++){
+        cout<<i<<" ";
+    }
+    cout<<endl;
+}
+
+// function 3: count numbers that are not multiples of 3
+int countnotmultiple3(int n){
+    int count = 0;
+
+    for(int i=n; i<=15; i++){
+        if(i%3 != 0){
+            count++;
+        }
+    }
+
+    return count;
+}
+
+// function 4: print the final result
+void printresult(int n){
+    int count = countnotmultiple3(n);
+
+    cout<<"From "<<n<<" up to 15, there are "<<count
+        <<" number/s that are not multiplied by 3."<<endl;
+}

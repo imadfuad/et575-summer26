@@ -42,5 +42,14 @@ int main(){
     cout<<"\n------ example 7: function calling function ----"<<endl;
 cout<<tripleaddition()<<endl;
 
+
+    cout<<"\n------ lab exercise ----"<<endl;
+    int number = collectnumber();
+
+    cout<<"Numbers from "<<number<<" up to 15: ";
+    printnumbers(number);
+
+    printresult(number);
+
     return 0;
 }
