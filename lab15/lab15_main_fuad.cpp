@@ -38,5 +38,12 @@ cout<<"\n----- Example 6: range of random function -----"<<endl;
 int r = random_neg5_10();
 cout<<r<<endl;
 
+
+cout<<"\n----- Exercise A: falling distance -----"<<endl;
+
+int t = randomtime();
+float d = fallingdistance(t);
+output(t, d);
+
     return 0;
 }

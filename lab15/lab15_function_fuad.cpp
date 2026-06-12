@@ -101,3 +101,31 @@ int random_neg5_10(){
     srand(time(0));
     return (-5 + rand()%16);
 }
+
+
+// Exercise A
+// global constant variable
+const float gravity = 9.8;
+
+// random number function
+// generates random number between 1 and 100 inclusive
+
+int randomtime(){
+    int num = rand()%100 + 1;
+    return num;
+}
+
+// falling distance function
+// distance = 0.5 * gravity * time^2
+
+float fallingdistance(int time){
+    float distance = 0.5 * gravity * pow(time, 2);
+    return distance;
+}
+
+// output function
+
+void output(int time, float distance){
+    cout<<"The falling distance in "<<time<<" seconds is "
+        <<distance<<" meters."<<endl;
+}
