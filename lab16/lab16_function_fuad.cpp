@@ -94,7 +94,99 @@ void b(string& v){
 void c(string* v){
     cout << "C = " << *v << endl;
     *v = "updated C";
-
-
-    return;
 }
+
+
+// example 3
+void introarray() {
+    //declare an array with size 3
+    int scores[3];
+     // use squared brackets [] to access to each element in the array
+    // each element is organized by the index number starting from
+    // zero (left-most).
+    cout << scores << endl;
+    cout << "first element = " << scores[0] << endl;
+ // assign values to each element in an array
+    scores[0] = 50;
+    scores[1] = 80;
+    scores[2] = 88;
+
+    cout << "first element = " << scores[0] << endl;
+        // initializing an array
+    char symbols[5] = {'$', '#', '@', '!', 'G'};
+    cout << "3rd symbol = " << symbols[2] << endl;
+
+    // the size of an array in a square brackets [], can be ignored
+    // if the array has initial values
+    string names[] = {"Peter", "Annie"};
+    cout << "2nd name " << names[1] << endl;
+
+
+        // loop through each element in an array symbol
+    for(int i = 0; i < 5; i++){
+        cout << symbols[i] << endl;
+    }
+
+    // use loop to find the average of scores array
+    float avgscore = 0, sumscore = 0;
+
+    for(int i = 0; i < 3; i++){
+        sumscore += scores[i];
+    }
+
+    avgscore = sumscore / 3;
+
+    cout << "The average score is = " << avgscore << endl;
+
+}
+
+// example 4: passing an array into a function
+void printelements(int sizearray, int arr[]){
+    for(int i = 0; i < sizearray; i++){
+        cout << arr[i] << "\t";
+    }
+
+    cout << endl;
+}
+
+// update values in an array
+void updatearray(int sizearray, int *arr){
+    for(int i = 0; i < sizearray; i++){
+        cout << "Enter an age: ";
+        cin >> arr[i];
+    }
+}
+
+// function to find how many adult ages in array age
+// the function will return the count
+int countadult(int sizearray, int *arr){
+    int counter = 0;
+
+    for(int i = 0; i < sizearray; i++){
+        if(arr[i] >= 21)
+            counter++;
+    }
+
+    return counter;
+}
+
+// exercise b: fill an array with random numbers
+void fillarray(int sizearray, int arr[]){
+    for(int i = 0; i < sizearray; i++){
+        arr[i] = rand() % 9 + 1; // random number between 1 and 9
+    }
+}
+
+// exercise b: count even numbers in an array
+int counteven(int sizearray, int arr[]){
+    int counter = 0;
+
+    for(int i = 0; i < sizearray; i++){
+        if(arr[i] % 2 == 0)
+            counter++;
+    }
+
+    return counter;
+}
+
+   
