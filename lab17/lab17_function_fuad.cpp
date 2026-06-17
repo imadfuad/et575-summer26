@@ -68,3 +68,43 @@ void intro2darray(){
     // accessing to a value in a 2d array
     cout<<"The temperature in 1st row, 2nd column "<<temperature[0][1]<<endl;
 }
+
+// example 3: print each value in a 2d array
+// the size of the column HAS to be passed in a 2d array
+// int arr[][3] --> int (*arr)[3]
+void printarray(int arr[][3], int rows){
+    for(int r = 0; r<rows; r++){
+        for(int c =0; c<3; c++){
+            cout<<arr[r][c]<<"\t";
+        }
+        cout<<endl;
+    }
+}
+
+// example 4: 2d array application
+// function to find and print the average of student's grade
+// 2d set-up : row --> student, column --> subjects.
+// 2d array of 3 students and 4 subjects per student
+void studentaverage(int (*arr)[4], int sizestudents, int sizesubjects, int *avg){
+    int index =0;
+    for(int r = 0; r<sizestudents; r++){
+        int sum = 0;
+        
+        for(int c = 0; c<sizesubjects; c++){
+            sum += arr[r][c];
+        }
+       // cout<<"student "<<r+1<<"average grade ="<<(sum/sizesubjects)<<endl;
+       // save the average of each student in a 1d array , avg
+       avg[index]= sum/sizesubjects;
+       index++;
+    }
+
+
+}
+
+// function to print the average of each student
+void printavg(int *avg, int sizestudents){
+    for(int i=0; i<sizestudents; i++){
+        cout<<"Student "<<i+1<<" average grade = "<<avg[i]<<endl;
+    }
+}
