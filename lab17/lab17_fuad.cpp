@@ -5,6 +5,8 @@ lab 17, array application
 */
 #include<iostream>
 #include "lab17_function_fuad.cpp"
+#include<cstdlib>
+#include<ctime>
 
 using namespace std;
 
@@ -51,5 +53,32 @@ int grades[students][subjects] = {
 int studentavg[students];
 studentaverage(grades, students, subjects, studentavg);
 printavg(studentavg, students);
+
+
+cout<<"\n----- Exercise A -----"<<endl;
+
+int arr[ARRAY_SIZE] = {34, 12, 56, 8, 90};
+
+int minNumber = findMin(arr);
+cout << "The minimum number is " << minNumber << endl;
+
+
+cout<<"\n----- Exercise B -----"<<endl;
+
+srand(time(0));
+
+int arrayNumber2D[ARRAY_SIZE][ARRAY_SIZE] = {0};
+int max = 200;
+int min = 150;
+
+/* Call function 'populateArray2D' to fill the array with random numbers between 1 and 255 */
+populateArray2D(arrayNumber2D);
+
+/* Call function to count the numbers in the array that are between min and max */
+int totalNumber = range2D(arrayNumber2D, min, max);
+
+cout << "\nArray has " << totalNumber << " number(s) between " << min << " and " << max << endl;
+
+
     return 0;
 }

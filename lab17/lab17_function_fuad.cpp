@@ -108,3 +108,44 @@ void printavg(int *avg, int sizestudents){
         cout<<"Student "<<i+1<<" average grade = "<<avg[i]<<endl;
     }
 }
+
+const int ARRAY_SIZE = 5;
+
+// Exercise A
+// function to find and return the minimum value in a 1d array
+int findMin(int arr[]){
+    int minNumber = arr[0];
+
+    for(int i = 1; i<ARRAY_SIZE; i++){
+        if(arr[i] < minNumber)
+            minNumber = arr[i];
+    }
+
+    return minNumber;
+}
+
+
+// Exercise B
+// function to populate a 5 x 5 2d array with random numbers between 1 and 255
+void populateArray2D(int arr[][ARRAY_SIZE]){
+    for(int r = 0; r<ARRAY_SIZE; r++){
+        for(int c = 0; c<ARRAY_SIZE; c++){
+            arr[r][c] = rand()%255 + 1;
+        }
+    }
+}
+
+
+// function to count how many numbers are between min and max inclusive
+int range2D(int arr[][ARRAY_SIZE], int min, int max){
+    int totalNumber = 0;
+
+    for(int r = 0; r<ARRAY_SIZE; r++){
+        for(int c = 0; c<ARRAY_SIZE; c++){
+            if(arr[r][c] >= min && arr[r][c] <= max)
+                totalNumber++;
+        }
+    }
+
+    return totalNumber;
+}
