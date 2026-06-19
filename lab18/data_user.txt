@@ -1,0 +1,2 @@
+This is my output file - Md Imad Fuad.
+This line was appended to the file.
